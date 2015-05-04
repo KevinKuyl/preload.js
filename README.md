@@ -40,4 +40,15 @@ preloader.extensions.video = ['mp4', 'ogv'];
 </script>
 ```
 
+Another thing that might be interesting to know is it emits events as well, 'loaderprogress' and 'loadcomplete'.
+```html
+<script>
+  document.addEventListener('loaderprogress', function(e){
+    console.log('New file loaded: ' + e.file);
+  });
+</script>
+```
+
+The preloader also keeps track of loaded files and percentage loaded in preloader.data 
+
 And that just about covers it.
