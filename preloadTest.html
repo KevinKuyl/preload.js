@@ -5,7 +5,7 @@
 	</head>
   <script src="preload.js"></script>
   <script>
-		document.addEventListener('loaderprogress', function(){console.log(preloader.data.pctLoaded + '%' + ' Loaded')});
+		document.addEventListener('loaderprogress', function(e){console.log('New file loaded: ' + e.file + ' total: ' + preloader.data.pctLoaded + '%' + ' Loaded')});
 		document.addEventListener('loadcomplete', function(){console.log('All files loaded')});
 
 		preloader.load([

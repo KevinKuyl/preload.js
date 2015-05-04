@@ -28,12 +28,9 @@ var preloader = {
       for( type in preloader.extensions ){
         if( preloader.extensions[ type ].indexOf( ext ) > -1 ) {
           preloader.lib[type] = preloader.lib[type] || [];
-
-
           preloader.loaders[type]( url, function(file, type){
             preloader.data.filesLoaded++;
             preloader.lib[type].push(file);
-
             if(preloader.onProgress){
               preloader.onProgress();
             }
@@ -43,11 +40,9 @@ var preloader = {
                   evt.file = file.src;
               document.dispatchEvent(evt);
             };
-
             if(preloader.data.filesToLoad == preloader.data.filesLoaded) {
               var evt = document.createEvent('Event');
                   evt.initEvent('loadcomplete', true, true);
-
               document.dispatchEvent(evt);
               if( callback ) callback();
             }
