@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>preloader test</title>
+	</head>
+  <script src="preload.js"></script>
+  <script>
+		document.addEventListener('loaderprogress', function(){console.log(preloader.data.pctLoaded + '%' + ' Loaded')});
+		document.addEventListener('loadcomplete', function(){console.log('All files loaded')});
+
+		preloader.load([
+			'images/test.png',
+			'audio/01.mp3'
+		]);
+
+
+  </script>
+	<body>
+	</body>
+</html>
