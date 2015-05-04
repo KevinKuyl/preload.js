@@ -27,7 +27,7 @@ preloader.loader.video = function(url, callback){
     callback(video, 'video')
   });
   
-  video.appendChild(video);
+  video.appendChild(source);
   source.src = url;
 }
 </script>
